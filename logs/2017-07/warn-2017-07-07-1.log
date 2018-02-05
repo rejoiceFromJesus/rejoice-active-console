@@ -1,0 +1,5 @@
+[2017-07-07 10:52:24,673][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2017-07-07 10:52:24,677][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2017-07-07 10:52:24,677][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2017-07-07 10:52:24,678][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2017-07-07 10:52:51,528][http-nio-8080-exec-2][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/]:no session, redirect to /login

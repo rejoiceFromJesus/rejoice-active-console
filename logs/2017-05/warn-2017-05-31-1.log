@@ -1,0 +1,2 @@
+[2017-05-31 08:35:56,981][http-nio-8081-exec-8][WARN][org.springframework.web.servlet.PageNotFound:215] Request method 'POST' not supported
+[2017-05-31 08:35:56,992][http-nio-8081-exec-8][WARN][org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
