@@ -26,6 +26,11 @@ public abstract class Constant {
 	public static final String SUCCESS="success";
 	public static final String SESSION_KEY = "loginUser";
 	//no auth paths
-	public static final String[] PASS_PATHS = new String[]{"/page/login.html","/logout","/user/login","/company/active","/error"};
+	public static final String[] PASS_PATHS = new String[]{
+		"/page/login.html",
+		"/logout","/user/login",
+		"/company/active",
+		"/user/register",
+		"/error"};
 
 }

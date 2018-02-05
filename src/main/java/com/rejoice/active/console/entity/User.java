@@ -47,6 +47,8 @@ public class User extends BaseEntity {
 	private String address;
 	private Integer age;
 	private String sex;
+	private String mobile;
+	
 
 	public String getUsername() {
 		return username;
@@ -106,4 +108,10 @@ public class User extends BaseEntity {
     public int getColumnCount() {
         return getClass().getDeclaredFields().length;
     }
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
 }

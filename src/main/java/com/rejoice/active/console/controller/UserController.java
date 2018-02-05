@@ -12,14 +12,18 @@ package com.rejoice.active.console.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.rejoice.active.console.common.bean.Result;
 import com.rejoice.active.console.common.constant.Constant;
 import com.rejoice.active.console.entity.User;
+import com.rejoice.active.console.handler.InvalidParamException;
 import com.rejoice.active.console.service.UserService;
 
 /**
@@ -58,5 +62,18 @@ public class UserController extends BaseController<User,UserService>{
 		request.getSession().removeAttribute(Constant.SESSION_KEY);
 		model.setViewName("redirect:/page/login.html");
 		return model;
+	}
+	
+	@PostMapping("/register")
+	public Result<Object> register(@RequestBody User user){
+		if(StringUtils.isBlank(user.getMobile())){
+			throw new InvalidParamException("mobile is blank");
+		}
+		if(StringUtils.isBlank(user.getPassword())){
+			throw new InvalidParamException("password is blank");
+		}
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		this.getService().saveSelective(user);
+		return Result.success(null);
 	}
 }

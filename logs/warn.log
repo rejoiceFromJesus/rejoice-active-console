@@ -1,16 +1,469 @@
-[2018-01-30 08:59:21,094][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:21,096][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:21,097][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:21,097][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
-[2018-01-30 08:59:59,685][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:59,685][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:59,686][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
-[2018-01-30 08:59:59,686][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
-[2018-01-30 09:00:22,996][http-nio-8080-exec-10][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/]:no session, redirect to /login
-[2018-01-30 09:00:41,299][http-nio-8080-exec-9][WARN][org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'text' is not present
-[2018-01-30 09:01:17,332][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'text' is not present
-[2018-01-30 09:03:29,412][http-nio-8080-exec-2][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/]:no session, redirect to /login
-[2018-01-30 09:04:59,215][http-nio-8080-exec-5][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/qrcode]:no session, redirect to /login
-[2018-01-30 09:05:23,468][http-nio-8080-exec-9][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/]:no session, redirect to /login
-[2018-01-30 09:07:15,759][http-nio-8080-exec-5][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/page/home.html]:no session, redirect to /login
-[2018-01-30 09:07:20,975][http-nio-8080-exec-2][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/]:no session, redirect to /login
+[2018-02-05 09:06:25,194][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:06:25,198][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:06:25,198][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:06:25,199][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:06:29,006][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:10:33,209][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:10:33,210][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:10:33,210][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:10:33,210][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:10:33,694][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:12:24,020][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:24,020][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:24,020][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:24,020][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:12:24,487][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:12:26,581][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:26,581][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:26,583][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:12:26,584][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:12:27,067][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:17:49,643][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:17:49,644][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:17:49,644][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:17:49,644][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:17:50,134][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:19:46,048][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:46,048][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:46,048][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:46,048][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:19:46,577][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:19:48,682][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:48,682][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:48,682][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:19:48,682][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:19:49,186][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:20:43,355][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:43,355][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:43,355][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:43,356][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:20:43,896][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:20:47,174][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:47,175][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:47,175][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:20:47,175][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:20:47,558][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error on token ")", { expected after this token
+
+[2018-02-05 09:21:01,760][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:01,760][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:01,760][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:01,760][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:21:02,314][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+public void com.rejoice.active.console.controller.BaseController.save(T) throws java.lang.Exception
+to {[/user],methods=[POST]}: There is already 'userController' bean method
+public void com.rejoice.active.console.controller.UserController.regist() mapped.
+[2018-02-05 09:21:21,845][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:21,845][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:21,845][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:21:21,845][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:21:22,671][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:34:10,948][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:10,948][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:10,949][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:10,949][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:34:11,723][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:34:20,917][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:20,917][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:20,917][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:34:20,917][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:34:21,739][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:35:01,638][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:35:01,638][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:35:01,638][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:35:01,638][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:35:02,457][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:39:30,230][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:30,230][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:30,230][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:30,230][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:39:30,880][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalDefaultExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalDefaultExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalDefaultExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.controller.CompanyController cannot be resolved
+	CompanyController cannot be resolved to a type
+
+[2018-02-05 09:39:48,056][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:48,056][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:48,056][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:48,057][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:39:48,891][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:39:59,960][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:59,961][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:59,961][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:39:59,961][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:00,200][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCompanyController': Unsatisfied dependency expressed through field 'companyService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'companyService': Failed to introspect bean class [com.rejoice.active.console.service.CompanyService] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: Company
+[2018-02-05 09:40:05,514][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'activeHistoryMapper' and 'com.rejoice.active.console.mapper.ActiveHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:05,514][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'companyMapper' and 'com.rejoice.active.console.mapper.CompanyMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:05,514][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:05,514][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:05,755][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiCompanyController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\api\ApiCompanyController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.api.ApiCompanyController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.service.CompanyService cannot be resolved
+	CompanyService cannot be resolved to a type
+
+[2018-02-05 09:40:10,007][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:10,007][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:10,238][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiCompanyController' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\controller\api\ApiCompanyController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.controller.api.ApiCompanyController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.service.CompanyService cannot be resolved
+	CompanyService cannot be resolved to a type
+
+[2018-02-05 09:40:19,885][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:19,885][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:20,273][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiGlobalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\ApiGlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.ApiGlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.controller.api.ApiCompanyController cannot be resolved
+	ApiCompanyController cannot be resolved to a type
+
+[2018-02-05 09:40:25,685][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:25,685][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:26,079][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiGlobalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\ApiGlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.ApiGlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.controller.api cannot be resolved
+	ApiCompanyController cannot be resolved to a type
+
+[2018-02-05 09:40:34,137][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:34,137][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:34,501][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.controller.api cannot be resolved
+	ApiCompanyController cannot be resolved to a type
+
+[2018-02-05 09:40:42,038][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:40:42,038][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:40:42,446][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The import com.rejoice.active.console.controller.api cannot be resolved
+
+[2018-02-05 09:41:23,102][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:41:23,102][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:41:23,769][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:42:34,566][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:42:34,566][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:42:35,176][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:45:18,257][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:45:18,257][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:45:18,910][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:45:52,126][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:45:52,126][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:45:52,769][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:45:56,194][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:45:56,194][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:45:56,939][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:48:22,511][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:48:22,511][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:48:23,235][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:48:28,902][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:48:28,902][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:48:29,528][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:49:12,161][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:49:12,161][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:49:12,825][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:49:18,312][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:49:18,313][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:49:19,045][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:51:00,781][http-nio-8080-exec-2][WARN][com.rejoice.active.console.interceptor.SessionInterceptor:48] visit path[/user/register]:no session, redirect to /login
+[2018-02-05 09:52:01,735][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:52:01,735][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:52:02,575][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:52:04,077][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:52:07,896][http-nio-8080-exec-2][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:52:08,659][http-nio-8080-exec-3][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:52:09,285][http-nio-8080-exec-6][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:52:09,585][http-nio-8080-exec-7][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:52:09,862][http-nio-8080-exec-4][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:54:14,709][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:54:14,709][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:54:15,368][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:54:31,143][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:54:31,144][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:54:31,862][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:54:57,305][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:54:57,305][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:54:58,305][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:55:02,521][http-nio-8080-exec-2][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:391] Failed to invoke @ExceptionHandler method: public com.rejoice.active.console.response.ResponseVo com.rejoice.active.console.handler.GlobalExceptionHandler.defaultErrorHandler(javax.servlet.http.HttpServletRequest,java.lang.Exception) throws java.lang.Exception
+java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ";" to complete ReturnStatement
+
+	at com.rejoice.active.console.handler.GlobalExceptionHandler.defaultErrorHandler(GlobalExceptionHandler.java:31) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_05]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:384) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:59) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:136) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:74) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1218) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1030) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) [spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.0.29.jar:1.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) [spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) [spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_05]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_05]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_05]
+[2018-02-05 09:55:02,522][http-nio-8080-exec-2][WARN][org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:55:17,389][http-nio-8080-exec-6][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:391] Failed to invoke @ExceptionHandler method: public com.rejoice.active.console.response.ResponseVo com.rejoice.active.console.handler.GlobalExceptionHandler.defaultErrorHandler(javax.servlet.http.HttpServletRequest,java.lang.Exception) throws java.lang.Exception
+java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ";" to complete ReturnStatement
+
+	at com.rejoice.active.console.handler.GlobalExceptionHandler.defaultErrorHandler(GlobalExceptionHandler.java:31) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_05]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:384) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:59) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:136) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:74) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1218) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1030) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) [spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.0.29.jar:1.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) [spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) [spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_05]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_05]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_05]
+[2018-02-05 09:55:17,389][http-nio-8080-exec-6][WARN][org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:55:43,740][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:55:43,740][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:55:44,099][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler': Failed to introspect bean class [com.rejoice.active.console.handler.GlobalExceptionHandler] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: ResponseVo
+[2018-02-05 09:55:54,039][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:55:54,040][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:55:54,362][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.response cannot be resolved
+	ResponseVo cannot be resolved
+
+[2018-02-05 09:56:07,838][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:56:07,839][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:56:08,259][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.response cannot be resolved
+	Syntax error, insert ";" to complete ReturnStatement
+
+[2018-02-05 09:56:15,725][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:56:15,725][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:56:16,387][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.rejoice.active.console.response cannot be resolved
+	Syntax error, insert ";" to complete ReturnStatement
+
+[2018-02-05 09:56:19,518][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:56:19,518][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:56:19,865][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The import com.rejoice.active.console.response cannot be resolved
+
+[2018-02-05 09:56:28,463][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:56:28,463][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:56:29,353][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:56:33,130][http-nio-8080-exec-3][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:13,419][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:57:13,419][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:57:13,731][restartedMain][WARN][org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalExceptionHandler' defined in file [D:\sts\rejoice-active-console\target\classes\com\rejoice\active\console\handler\GlobalExceptionHandler.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.rejoice.active.console.handler.GlobalExceptionHandler]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The import com.rejoice.active.console.response cannot be resolved
+
+[2018-02-05 09:57:20,272][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 09:57:20,272][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 09:57:21,034][restartedMain][WARN][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:62] Unable to start LiveReload server
+[2018-02-05 09:57:21,299][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:23,808][http-nio-8080-exec-8][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:24,584][http-nio-8080-exec-4][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:25,190][http-nio-8080-exec-3][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:25,769][http-nio-8080-exec-7][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:26,315][http-nio-8080-exec-9][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:29,213][http-nio-8080-exec-10][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 09:57:30,281][http-nio-8080-exec-5][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:29:38,233][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:29:38,234][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:29:52,399][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:30:44,481][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:30:44,481][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:30:46,853][http-nio-8080-exec-2][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:31:19,706][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:31:53,502][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:31:53,502][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:32:08,691][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:32:08,691][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:32:10,995][http-nio-8080-exec-2][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:32:34,629][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: mobile is blank
+[2018-02-05 10:32:41,495][http-nio-8080-exec-7][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:32:46,809][http-nio-8080-exec-3][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:33:51,404][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:33:51,405][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:34:17,248][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:34:17,248][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:34:35,871][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:34:35,871][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:34:42,355][http-nio-8080-exec-10][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: com.rejoice.active.console.handler.InvalidParamException: password is blank
+[2018-02-05 10:35:29,432][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:35:29,433][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:35:44,606][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:35:44,606][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:35:55,196][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:35:55,196][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:36:00,443][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:36:00,443][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:36:09,535][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:36:09,535][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:36:26,233][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+### The error may involve com.rejoice.active.console.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO rejoice_user  ( id,password,mobile ) VALUES( ?,?,? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+; SQL []; Duplicate entry '1' for key 'uni_user_mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+[2018-02-05 10:36:48,969][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:240] Skipping MapperFactoryBean with name 'userMapper' and 'com.rejoice.active.console.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[2018-02-05 10:36:48,969][restartedMain][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:167] No MyBatis mapper was found in '[com.rejoice.active.console.mapper]' package. Please check your configuration.
+[2018-02-05 10:36:52,708][http-nio-8080-exec-1][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+### The error may involve com.rejoice.active.console.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO rejoice_user  ( id,password,mobile ) VALUES( ?,?,? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+; SQL []; Duplicate entry '1' for key 'uni_user_mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+[2018-02-05 10:37:06,631][http-nio-8080-exec-7][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+### The error may involve com.rejoice.active.console.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO rejoice_user  ( id,password,mobile ) VALUES( ?,?,? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+; SQL []; Duplicate entry '1' for key 'uni_user_mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'uni_user_mobile'
+[2018-02-05 10:37:17,008][http-nio-8080-exec-3][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'uni_user_mobile'
+### The error may involve com.rejoice.active.console.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO rejoice_user  ( id,password,mobile ) VALUES( ?,?,? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'uni_user_mobile'
+; SQL []; Duplicate entry '2' for key 'uni_user_mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'uni_user_mobile'
+[2018-02-05 10:38:03,779][http-nio-8080-exec-10][WARN][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:189] Resolved exception caused by Handler execution: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'uni_user_mobile'
+### The error may involve com.rejoice.active.console.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO rejoice_user  ( id,username,password,mobile ) VALUES( ?,?,?,? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'uni_user_mobile'
+; SQL []; Duplicate entry '4' for key 'uni_user_mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'uni_user_mobile'
