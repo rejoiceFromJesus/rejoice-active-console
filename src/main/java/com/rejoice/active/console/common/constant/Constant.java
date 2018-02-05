@@ -30,6 +30,7 @@ public abstract class Constant {
 		"/page/login.html",
 		"/logout","/user/login",
 		"/company/active",
+		"/user/client/login",
 		"/user/register",
 		"/error"};
 

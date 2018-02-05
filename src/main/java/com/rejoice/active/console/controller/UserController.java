@@ -37,11 +37,11 @@ import com.rejoice.active.console.service.UserService;
  *
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController extends BaseController<User,UserService>{
 
 	
-	@PostMapping("login")
+	@PostMapping("/login")
 	public ModelAndView login(User user,HttpServletRequest request){
 		ModelAndView model = new ModelAndView();
 		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
@@ -52,6 +52,26 @@ public class UserController extends BaseController<User,UserService>{
 		}else{
 			model.setViewName("login"); 
 			model.addObject("error", "username and password not match");
+		}
+		return model;
+	}
+	@PostMapping("/client/login")
+	public ModelAndView clientLogin(User user,HttpServletRequest request){
+		if(StringUtils.isBlank(user.getMobile())){
+			throw new InvalidParamException("mobile is blank");
+		}
+		if(StringUtils.isBlank(user.getPassword())){
+			throw new InvalidParamException("password is blank");
+		}
+		ModelAndView model = new ModelAndView();
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		user = this.getService().queryOne(user);
+		if(user != null){
+			request.getSession().setAttribute(Constant.SESSION_KEY, user);
+			model.setViewName("redirect:/page/client/home.html");
+		}else{
+			model.setViewName("client/login"); 
+			model.addObject("error", "mobile and password not match");
 		}
 		return model;
 	}
