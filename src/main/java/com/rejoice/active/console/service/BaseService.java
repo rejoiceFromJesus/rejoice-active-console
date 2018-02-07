@@ -158,9 +158,6 @@ public abstract class BaseService<T>{
      * @throws NoSuchFieldException 
      */
     public void updateByIdSelective(T t) throws Exception {
-    	Field updateTime = ReflectionUtils.findField(t.getClass(), "updateTime");
-    	updateTime.setAccessible(true);
-    	updateTime.set(t, new Date());
         this.getMapper().updateByPrimaryKeySelective(t);
     }
 

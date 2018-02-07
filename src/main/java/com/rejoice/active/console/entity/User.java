@@ -39,17 +39,23 @@ public class User extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String realName;
-	private String nickName;
-	private String englishName;
 	private String username;
 	private String password;
-	private String address;
-	private Integer age;
-	private String sex;
 	private String mobile;
 	
 
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -62,56 +68,5 @@ public class User extends BaseEntity {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getRealName() {
-		return realName;
-	}
-	public void setRealName(String realName) {
-		this.realName = realName;
-	}
-	public String getNickName() {
-		return nickName;
-	}
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-	public String getEnglishName() {
-		return englishName;
-	}
-	public void setEnglishName(String englishName) {
-		this.englishName = englishName;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public Integer getAge() {
-		return age;
-	}
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-    public int getColumnCount() {
-        return getClass().getDeclaredFields().length;
-    }
-	public String getMobile() {
-		return mobile;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
+	
 }

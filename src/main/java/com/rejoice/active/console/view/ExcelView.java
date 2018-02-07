@@ -75,21 +75,6 @@ public class ExcelView extends AbstractXlsView{
 
         int rowCount = 1;
 
-        for(User user : users){
-            Row userRow =  sheet.createRow(rowCount++);
-            userRow.createCell(0).setCellValue(user.getRealName());
-            userRow.createCell(1).setCellValue(user.getUsername());
-            if(user.getAge() == null){
-            	userRow.createCell(2,CellType.BLANK);
-            }else{
-            	userRow.createCell(2).setCellValue(user.getAge());
-            }
-            userRow.createCell(3).setCellValue(user.getNickName());
-            userRow.createCell(4).setCellValue(user.getEnglishName());
-            userRow.createCell(5).setCellValue(user.getAddress());
-            userRow.createCell(6).setCellValue(user.getSex());
-
-            }
 
     }
 

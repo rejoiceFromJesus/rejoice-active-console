@@ -40,29 +40,6 @@ import com.rejoice.active.console.entity.User;
 public class UserService extends BaseService<User> {
 
 	
-	public PageInfo<User> queryListByPageAndOrder(User user, Integer page,
-			Integer rows,String sorts[],String orders[]) {
-		// 第一个参数是起始页，第二个参数是，页面显示的数据条数
-        PageHelper.startPage(page, rows);
-        Example example = new Example(User.class);
-        if (RejoiceUtil.isNotBlank(sorts) && RejoiceUtil.isNotBlank(orders)) {
-        	StringBuilder sortSB = new StringBuilder();
-        	for(int i = 0; i < sorts.length; i++){
-        		sortSB.append(StringUtil.camelhumpToUnderline(sorts[i])).append(" ").append(orders[i]).append(",");
-        	}
-            example.setOrderByClause(sortSB.substring(0, sortSB.length()-1));
-        }
-        Criteria criteria = example.createCriteria();
-        if(StringUtils.isNoneBlank(user.getUsername())){
-        	criteria.andLike("username", "%"+user.getUsername()+"%");
-        }
-        if(StringUtils.isNoneBlank(user.getRealName())){
-        	criteria.andLike("realName", "%"+user.getRealName()+"%");
-        }
-		List<User> list = this.getMapper().selectByExample(example);
-		return new PageInfo<User>(list);
-	}
-	
 	/* (non-Javadoc)
 	 * @see com.rejoice.active.console.service.BaseService#save(java.lang.Object)
 	 */

@@ -34,6 +34,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.rejoice.active.console.common.util.ImageService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  *
  * Regulatorsconsole
@@ -49,9 +51,9 @@ import com.rejoice.active.console.common.util.ImageService;
 @EnableScheduling
 @EnableAsync
 @EnableCaching
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.rejoice.active.console")
 @MapperScan(basePackages = "com.rejoice.active.console.mapper")
-public class ActiveConsole  extends SpringBootServletInitializer {
+public class ActiveConsole {
 
 	public static final String QRCODE_ENDPOINT = "/qrcode";
 	public static final long THIRTY_MINUTES = 1800000; 
@@ -79,10 +81,6 @@ public class ActiveConsole  extends SpringBootServletInitializer {
 	}
 	
 	
-	  @Override
-	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	        return application.sources(ActiveConsole.class);
-	    } 
 
 
 
