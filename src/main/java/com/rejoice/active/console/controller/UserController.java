@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,11 +21,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.rejoice.active.console.common.bean.CodeMsg;
 import com.rejoice.active.console.common.bean.Result;
 import com.rejoice.active.console.common.constant.Constant;
 import com.rejoice.active.console.entity.User;
 import com.rejoice.active.console.handler.InvalidParamException;
 import com.rejoice.active.console.service.UserService;
+import com.rejoice.active.console.vo.LoginVo;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 
 /**
  *
@@ -38,10 +46,11 @@ import com.rejoice.active.console.service.UserService;
  */
 @RestController
 @RequestMapping("/user")
+@Api(tags="用户模块")
 public class UserController extends BaseController<User,UserService>{
 
 	
-	@PostMapping("/login")
+	@PostMapping("login")
 	public ModelAndView login(User user,HttpServletRequest request){
 		ModelAndView model = new ModelAndView();
 		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
@@ -55,28 +64,50 @@ public class UserController extends BaseController<User,UserService>{
 		}
 		return model;
 	}
+	
 	@PostMapping("/client/login")
-	public ModelAndView clientLogin(User user,HttpServletRequest request){
+	@ApiOperation(value="用户登录", notes="使用手机号和密码进行登录")
+	@ApiImplicitParams({
+        @ApiImplicitParam(name = "loginVo",value = "用户登录vo",dataType="LoginVo",required=true)
+})
+	public Result<Object> clientLogin(@RequestBody LoginVo loginVo,HttpServletRequest request){
+		User user = new User();
+		BeanUtils.copyProperties(loginVo, user);
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		user = this.getService().queryOne(user);
+		if(user != null){
+			request.getSession().setAttribute(Constant.SESSION_KEY, user);
+		}else{
+			return Result.error(CodeMsg.LOGIN_ERROR);
+		}
+		return Result.success(null);
+	}
+	@PostMapping("/client/register")
+	@ApiOperation(value="用户注册", notes="手机号和密码必填")
+	@ApiImplicitParams({
+        @ApiImplicitParam(name = "user",value = "用户实体",  dataType = "User",required=true)
+})
+	public Result<Object> clientRegister(@RequestBody User user){
 		if(StringUtils.isBlank(user.getMobile())){
 			throw new InvalidParamException("mobile is blank");
 		}
 		if(StringUtils.isBlank(user.getPassword())){
 			throw new InvalidParamException("password is blank");
 		}
-		ModelAndView model = new ModelAndView();
-		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
-		user = this.getService().queryOne(user);
-		if(user != null){
-			request.getSession().setAttribute(Constant.SESSION_KEY, user);
-			model.setViewName("redirect:/page/client/home.html");
-		}else{
-			model.setViewName("client/login"); 
-			model.addObject("error", "mobile and password not match");
+		//validate if mobile exists
+		User userExists = new User();
+		userExists.setMobile(user.getMobile());
+		userExists = this.getService().queryOne(userExists);
+		if(userExists != null) {
+			return Result.error(CodeMsg.MOBILE_EXIST);
 		}
-		return model;
+		user.setUsername(user.getMobile());
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		this.getService().saveSelective(user);
+		return Result.success(null);
 	}
 	
-	@GetMapping("logout")
+	@GetMapping("/logout")
 	public ModelAndView logout(HttpServletRequest request){
 		ModelAndView model = new ModelAndView();
 		request.getSession().removeAttribute(Constant.SESSION_KEY);
@@ -84,16 +115,5 @@ public class UserController extends BaseController<User,UserService>{
 		return model;
 	}
 	
-	@PostMapping("/register")
-	public Result<Object> register(@RequestBody User user){
-		if(StringUtils.isBlank(user.getMobile())){
-			throw new InvalidParamException("mobile is blank");
-		}
-		if(StringUtils.isBlank(user.getPassword())){
-			throw new InvalidParamException("password is blank");
-		}
-		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
-		this.getService().saveSelective(user);
-		return Result.success(null);
-	}
+	
 }
