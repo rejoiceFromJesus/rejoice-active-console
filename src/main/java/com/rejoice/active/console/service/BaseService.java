@@ -72,6 +72,19 @@ public abstract class BaseService<T>{
     public List<T> queryListByWhere(T t) {
         return this.getMapper().select(t);
     }
+    
+    /**
+     * 根据条件查询
+     * 
+     * @param t
+     * @return
+     */
+    public List<T> queryListByWhereOrderBy(T t,String orderBy) {
+    	Example example = new Example(clazz);
+        example.createCriteria().andEqualTo(t);
+        example.setOrderByClause(orderBy);
+        return this.getMapper().selectByExample(example);
+    }
 
     /**
      * 查询数据总条数

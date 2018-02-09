@@ -43,12 +43,12 @@ public class SessionInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-		if(!Arrays.asList(Constant.PASS_PATHS).contains(request.getRequestURI().replace(request.getContextPath(), "")) 
+		/*if(!Arrays.asList(Constant.PASS_PATHS).contains(request.getRequestURI().replace(request.getContextPath(), "")) 
 				&& request.getSession().getAttribute(Constant.SESSION_KEY) == null){
 			LOGGER.warn("visit path["+request.getRequestURI()+"]:no session, redirect to /login");
 			response.sendRedirect(request.getContextPath()+"/page/login.html"); 
 			return false;
-		}  
+		}  */
 		return true; 
 	}
 

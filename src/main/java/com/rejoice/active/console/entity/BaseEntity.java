@@ -25,10 +25,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 public class BaseEntity {
 	
-
 	private Date createTime;
 	private Date updateTime;
-	private String description;
+	private String remark;
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -41,11 +40,11 @@ public class BaseEntity {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
-	public String getDescription() {
-		return description;
+	public String getRemark() {
+		return remark;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
 	
 }
