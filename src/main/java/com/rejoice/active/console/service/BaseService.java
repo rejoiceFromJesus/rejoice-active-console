@@ -264,7 +264,7 @@ public abstract class BaseService<T>{
         	for(int i = 0; i < sorts.length; i++){
         		sortSB.append(StringUtil.camelhumpToUnderline(sorts[i])).append(" ").append(orders[i]).append(",");
         	}
-        	sortSB.substring(0, sortSB.length()-1);
+        	sortSB.substring(0, sortSB.length()-2);
             example.setOrderByClause(sortSB.toString());
         }
 

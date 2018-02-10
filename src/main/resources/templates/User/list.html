@@ -1,27 +1,5 @@
-<table id="userList" class="easyui-datagrid" title="用户列表"
-	style="height: 100%; width: 100%;" idField="id"
-	data-options="fitColumns:true,nowrap : false,
-			striped:true,rownumbers:true,singleSelect:true,pagination:true,
-			singleSelect:false,loadMsg:'正在加载数据。。。',checkOnSelect:false,
-			multiSort:true,
-			url:'/user/page',method:'get',toolbar:userTB">
-	<thead>
-		<tr>
-			<th field="ck" checkbox="true"></th>
-			<th data-options="field:'realName',width:100,sortable:true">真实姓名</th>
-			<th data-options="field:'username',width:100,sortable:true">用户名</th>
-			<th data-options="field:'nickName',width:100,sortable:true">昵称</th>
-			<th data-options="field:'englishName',width:100,sortable:true">英文名</th>
-			<th data-options="field:'address',width:200">地址</th>
-			<th data-options="field:'age',width:100">年龄</th>
-			<th data-options="field:'sex',width:100">性别</th>
-			<th data-options="field:'description',width:100">描述</th>
-			<th data-options="field:'createTime',width:200,sortable:true">创建时间</th>
-			<th data-options="field:'updateTime',width:200,sortable:true">更新时间</th>
-		</tr>
-	</thead>
-</table>
-<div id="userTB" style="padding: 5px; height: auto">
+<div id="user-table"></div>
+<div id="user-toolbar" style="padding: 5px; height: auto">
 	<div style="margin-bottom: 5px">
 		<a href="#" onclick="addUser(this)" class="easyui-linkbutton"
 			iconCls="icon-add" plain="false"></a> <a href="#"
@@ -32,7 +10,7 @@
 	<div style="margin-left: 20px;">
 		<input class="easyui-validatebox" name="username" placeholder="用户名"
 			style="width: 150px" />&nbsp;&nbsp;&nbsp;&nbsp; <input
-			class="easyui-validatebox" name="realName" placeholder="真实姓名"
+			class="easyui-validatebox" name="mobile" placeholder="手机号"
 			style="width: 150px" />&nbsp;&nbsp;&nbsp;&nbsp; <a href="#"
 			class="easyui-linkbutton" plan="true" onclick="searchUser()"
 			iconCls="icon-search">查询</a>
@@ -46,10 +24,6 @@
 		<input type="hidden" name="id" />
 		<input type="hidden" name="oldPassword" />
 		<div class="fitem">
-			<label>真实姓名:</label> <input name="realName" class="easyui-textbox"
-				required="true" />
-		</div>
-		<div class="fitem">
 			<label>用户名:</label> <input name="username" class="easyui-textbox"
 				required="true" />
 		</div>
@@ -58,27 +32,19 @@
 				type="password" required="true" />
 		</div>
 		<div class="fitem">
-			<label>英文名:</label> <input name="englishName" class="easyui-textbox" />
+			<label>手机号:</label> <input  required="true" name="mobile" class="easyui-textbox" />
 		</div>
 		<div class="fitem">
-			<label>昵称:</label> <input name="nickName" class="easyui-textbox" />
-		</div>
-		<div class="fitem">
-			<label>地址:</label> <input name="address" class="easyui-textbox" />
-		</div>
-		<div class="fitem">
-			<label>性别:</label> <select id="sex" class="easyui-combobox"
-				data-options="required:true" name="sex"
-				style="width: 200px; height: 32px;">
-				<option value=""></option>
-				<option value="man">男</option>
-				<option value="women">女</option>
-				<option value="unknown">不详</option>
+			<label>管理员:</label> <select  id="sex" class="easyui-combobox"
+				data-options="required:true" name="isAdmin"
+				style="width: 206px; height: 32px;">
+				<option value="false">否</option>
+				<option value="true">是</option>
 			</select>
 		</div>
 		<div class="fitem">
-			<label>年龄:</label> <input name="age" data-options="precision:0,min:1"
-				class="easyui-numberbox" style="width: 200px; height: 32px" />
+			<label>描述:</label> <textarea  name="remark" cols="30" rows="5" style="    outline-style: none;
+    padding: 4px;border-radius: 4px;" ></textarea>
 		</div>
 	</form>
 </div>
@@ -91,6 +57,36 @@
 			style="width: 90px">Cancel</a>
 </div>
 <script>
+$(function(){
+	initUserTable()
+})
+function initUserTable(){
+	$('#user-table').datagrid({
+	    url:'/user/page/',
+	    fitColumns:true,
+	    method:'get',
+	    nowrap:false,
+	    toolbar:"#user-toolbar",
+	    striped:true,
+	    pagination:true,
+	    pageList:[10,30,50,100],
+	    rowStyler:function(){
+	    	return "height:40px;"
+	    },
+	    columns:[[
+			{field:'id',title:'选择',checkbox:true,width:"200"},
+			{field:'username',title:'用户名',width:"200"},
+			{field:'mobile',title:'手机号',width:"200"},
+			{field:'admin',title:'管理员',width:"200"},
+			{field:'remark',title:'描述',width:"200"},
+			{field:'createTime',title:'创建时间',width:"200"},
+			{field:'updateTime',title:'更新时间',width:"200"},
+			{field:'opt',title:'操作',width:100,align:'right',width:"200",formatter: function(value,row,index){
+				return '<a id="btn" href="#" class="button button-primary button-pill button-3d  button-tiny">修改密码</a>'+
+				' <a id="btn" href="#" class="button button-primary button-pill button-3d  button-tiny">充值</a>';
+			}}
+			]]
+	})};
 var userMethod = "GET";
 	function searchUser(selector, params) {
 		$('#userList').datagrid('load', {
@@ -131,12 +127,13 @@ var userMethod = "GET";
 						contentType:"application/json;charset=utf-8",
 						//data :  JSON.stringify(params),
 						success : function(msg) {
+							$("#userList").datagrid("reload");
+		    				 $('#userList').datagrid('clearChecked')
 							$.messager.alert({
 				    			title: "温馨提示",
 				    			msg: "删除成功",
 				    			fn: function(){
-				    				$("#userList").datagrid("reload");
-				    				 $('#userList').datagrid('clearChecked')
+				    				
 				    			}
 				    		});
 						}
@@ -158,6 +155,8 @@ var userMethod = "GET";
 			data :   JSON.stringify($("#userForm").serializeFormJSON()),
 			success : function(msg) {
 				$('#userDialog').dialog('close');
+				$("#userList").datagrid("reload");
+				 $('#userList').datagrid('clearChecked')
 				$.messager.alert({
 	    			title: $('#userDialog').panel('options').title,
 	    			msg: "操作成功",

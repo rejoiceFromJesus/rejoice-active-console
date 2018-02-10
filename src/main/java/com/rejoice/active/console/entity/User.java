@@ -25,7 +25,7 @@ import javax.persistence.Transient;
  * @version 1.0.0
  *
  */
-@Table(name="rejoice_user")
+@Table(name="user")
 public class User extends BaseEntity {
 	@Transient
 	private String oldPassword;
@@ -42,8 +42,20 @@ public class User extends BaseEntity {
 	private String username;
 	private String password;
 	private String mobile;
+	private Boolean isAdmin;
+	
+	
+	public String getAdmin() {
+		return isAdmin?"是":"否";
+	}
 	
 
+	public Boolean getIsAdmin() {
+		return isAdmin;
+	}
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 	public String getPassword() {
 		return password;
 	}
