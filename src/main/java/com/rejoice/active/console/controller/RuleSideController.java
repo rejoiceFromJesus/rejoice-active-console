@@ -27,7 +27,7 @@ public class RuleSideController extends BaseController<RuleSide, RuleSideService
 		RuleSide ruleSideCons = new RuleSide();
 		for(int i = 0; i <= 10; i++) {
 			ruleSideCons.setRank(i);
-			data.put(i, this.getService().queryListByWhere(ruleSideCons));
+			data.put(i, this.getService().queryListByWhereOrderBy(ruleSideCons," field(side_name,'大','小','单','双','龙','虎')"));
 		}
 		return Result.success(data);
 	}

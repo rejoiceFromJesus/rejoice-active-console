@@ -16,6 +16,14 @@ public class RuleSide extends BaseEntity {
 	private Integer rank;
 	private Boolean side;
 	private BigDecimal rate;
+	private String sideName;
+	
+	public String getSideName() {
+		return sideName;
+	}
+	public void setSideName(String sideName) {
+		this.sideName = sideName;
+	}
 	public Integer getId() {
 		return id;
 	}
