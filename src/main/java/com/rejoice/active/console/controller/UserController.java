@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -49,6 +50,13 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags="用户模块")
 public class UserController extends BaseController<User,UserService>{
 
+	
+	@PutMapping("/change-pwd")
+	public Result<Boolean> changePwd(@RequestBody User user){
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		this.getService().updateByIdSelective(user);
+		return Result.success(true);
+	}
 	
 	@PostMapping("login")
 	public ModelAndView login(User user,HttpServletRequest request){

@@ -56,7 +56,7 @@
    			if(title == undefined){
    				title="温馨提示"
    			}
-   			$.messager.alert(title,content);
+   			$.messager.alert(title,"<pre>"+content+"</pre>");
    		}
    		
    		

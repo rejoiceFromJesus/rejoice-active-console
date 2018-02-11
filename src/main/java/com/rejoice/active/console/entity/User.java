@@ -9,6 +9,8 @@
  */
 package com.rejoice.active.console.entity;
 
+import java.math.BigDecimal;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -40,6 +42,7 @@ public class User extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String username;
+	private BigDecimal balance;
 	private String password;
 	private String mobile;
 	private Boolean isAdmin;
@@ -79,6 +82,12 @@ public class User extends BaseEntity {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public BigDecimal getBalance() {
+		return balance;
+	}
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
 	}
 	
 }

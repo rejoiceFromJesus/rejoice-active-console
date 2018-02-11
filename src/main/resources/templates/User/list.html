@@ -48,14 +48,41 @@
 		</div>
 	</form>
 </div>
+
+
 <div id="userButtons">
 		<a href="javascript:void(0)" class="easyui-linkbutton c6"
-			iconCls="icon-ok" onclick="saveUser()" style="width: 90px">Save</a> <a
+			iconCls="icon-ok" onclick="saveUser()" style="width: 90px">确定</a> <a
 			href="javascript:void(0)" class="easyui-linkbutton"
 			iconCls="icon-cancel"
 			onclick="javascript:$('#userDialog').dialog('close')"
-			style="width: 90px">Cancel</a>
+			style="width: 90px">取消</a>
 </div>
+
+<!-- change pwd dialog starts -->
+
+<div id="pwd-dialog" class="easyui-dialog"
+	style="width: 450px; height: 200px; padding: 10px 20px" modal="true" closed="true"
+	buttons="#pwd-buttons">
+	<form id="pwd-form" class="fm" method="post">
+	<input type="hidden" name="id" />
+		<div class="fitem">
+			新密码: <input name="password" class="easyui-textbox"
+				required="true" />
+		</div>
+	</form>
+</div>
+<div id="pwd-buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton c6"
+			iconCls="icon-ok" onclick="submitChangePwd()" style="width: 90px">确定</a> <a
+			href="javascript:void(0)" class="easyui-linkbutton"
+			iconCls="icon-cancel"
+			onclick="javascript:$('#pwd-dialog').dialog('close')"
+			style="width: 90px">取消</a>
+</div>
+<!-- change pwd dialog ends -->
+
+
 <script>
 $(function(){
 	initUserTable()
@@ -74,16 +101,17 @@ function initUserTable(){
 	    	return "height:40px;"
 	    },
 	    columns:[[
-			{field:'id',title:'选择',checkbox:true,width:"200"},
-			{field:'username',title:'用户名',width:"200"},
-			{field:'mobile',title:'手机号',width:"200"},
-			{field:'admin',title:'管理员',width:"200"},
-			{field:'remark',title:'描述',width:"200"},
-			{field:'createTime',title:'创建时间',width:"200"},
-			{field:'updateTime',title:'更新时间',width:"200"},
-			{field:'opt',title:'操作',width:100,align:'right',width:"200",formatter: function(value,row,index){
-				return '<a id="btn" href="#" class="button button-primary button-pill button-3d  button-tiny">修改密码</a>'+
-				' <a id="btn" href="#" class="button button-primary button-pill button-3d  button-tiny">充值</a>';
+			{field:'id',title:'选择',checkbox:true,width:"5%"},
+			{field:'username',title:'用户名',width:"10%"},
+			{field:'balance',title:'余额',width:"10%"},
+			{field:'mobile',title:'手机号',width:"11%"},
+			{field:'admin',title:'管理员',width:"10%"},
+			{field:'remark',title:'描述',width:"20%"},
+			{field:'createTime',title:'创建时间',width:"10%"},
+			{field:'updateTime',title:'更新时间',width:"10%"},
+			{field:'opt',title:'操作',width:"18%",formatter: function(value,row,index){
+				return '<a  href="#" class="button button-primary button-pill button-3d  button-tiny" onClick="changePwd('+row.id+',\''+row.username+'\')">修改密码</a>'+
+				' <a  href="#" class="button button-primary button-pill button-3d  button-tiny" onClick="recharge()">充值</a>';
 			}}
 			]]
 	})};
@@ -99,10 +127,33 @@ var userMethod = "GET";
 		$('#userForm').form('clear');
 		userMethod="POST";
 	}
+	
+	function changePwd(id,username) {
+		$('#pwd-dialog').dialog('open').dialog('setTitle', '修改【'+username+'】的密码');
+		$('#pwd-form').form('clear');
+		$('#pwd-form').form('load', {"id":id});
+	}
+	
+	function submitChangePwd(){
+		if (!$('#pwd-form').form('validate')) {
+			$.messager.alert('提示', '表单还未填写完成!');
+			return;
+		}
+		
+		$.ajax({
+					url:"/user/change-pwd",
+					method:"put",
+					contentType:"application/json;charset=utf-8",
+					data:JSON.stringify($("#pwd-form").serializeFormJSON()),
+				}).done(function(data){
+					$('#pwd-dialog').dialog('close');
+					alert(JSON.stringify(data, undefined, 2));
+				})
+	}
 
+	
 	function updateUser() {
 		var rows = $('#userList').datagrid('getChecked');
-		console.info(rows)
 		if(rows.length==0){
 			alert("至少选择一行")
 		}else if(rows.length > 1){

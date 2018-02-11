@@ -5,7 +5,7 @@ public enum CodeMsg {
 	/**
 	 * 通用模块
 	 */
-	SUCCESS("0","success"),
+	SUCCESS("0","操作成功"),
 	SERVER_ERROR("500100","internal server error"),
 	PARAM_ERROR("500101","param error"),
 	
@@ -32,7 +32,7 @@ public enum CodeMsg {
 	
 	
 	
-	DEFAUT_ERROR("-1","默认错误");
+	DEFAUT_ERROR("-1","操作失败");
 	
 	private final String code;
 	private String msg;
