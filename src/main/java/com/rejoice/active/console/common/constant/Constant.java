@@ -25,6 +25,27 @@ public abstract class Constant {
 	public static final String PREFIX="rejoice.activeconsole";
 	public static final String SUCCESS="success";
 	public static final String SESSION_KEY = "loginUser";
+	
+	/**
+	 * yyyy-MM-dd
+	 */
+	public static final String DATE_FORMAT_PATTERN1 = "yyyy-MM-dd";
+	/**
+	 * yyyy-MM-dd HH:mm:ss
+	 */
+	public static final String DATE_FORMAT_PATTERN2 = "yyyy-MM-dd HH:mm:ss";
+	/**
+	 * yyyyMMdd
+	 */
+	public static final String DATE_FORMAT_PATTERN3 = "yyyyMMdd";
+	/**
+	 * yyyy-MM-dd HH:mm:ss:SSS
+	 */
+	public static final String DATE_FORMAT_PATTERN4 = "yyyy-MM-dd HH:mm:ss:SSS";
+	/**
+	 * yyyyMM
+	 */
+	public static final String DATE_FORMAT_YYYYMM = "yyyyMM";
 	//no auth paths
 	public static final String[] PASS_PATHS = new String[]{
 		"/page/login.html",

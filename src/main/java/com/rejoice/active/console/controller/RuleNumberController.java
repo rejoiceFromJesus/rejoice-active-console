@@ -29,7 +29,7 @@ public class RuleNumberController extends BaseController<RuleNumber, RuleNumberS
 		RuleNumber ruleNumberCons = new RuleNumber();
 		for(int i = 0; i <= 10; i++) {
 			ruleNumberCons.setRank(i);
-			data.put(i, this.getService().queryListByWhereOrderBy(ruleNumberCons,"number asc"));
+			data.put(i, this.getService().queryListByWhereOrderByClause(ruleNumberCons,"number asc"));
 		}
 		return Result.success(data);
 	}

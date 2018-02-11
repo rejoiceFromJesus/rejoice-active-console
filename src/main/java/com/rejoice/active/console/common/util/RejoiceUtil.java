@@ -1,24 +1,162 @@
 package com.rejoice.active.console.common.util;
 
+import java.lang.reflect.Field;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.joda.time.DateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.rejoice.active.console.common.constant.Constant;
+import com.rejoice.active.console.handler.InternalServerException;
 
 /**
- * 预订服务工具类
+ * rejoice工具类
 * @author rejoice 
 * @date 2016年6月16日 上午9:47:07 
 * @version V1.0
  */
 public class RejoiceUtil {
 	
+	private static Logger LOGGER = LoggerFactory.getLogger(RejoiceUtil.class);
+	
+	
+	/**
+	 * 
+	 * buildHalfYears: build a list with string like yyyy年上半年 or yyyy年下半年, from startYear to now
+	 * @param startYear 
+	 * @return a list with chinese halfYears
+	 */
+	public static List<String> buildHalfYears(Integer startYear){
+		List<String> halfYears = new ArrayList<String>();
+		DateTime now = DateTime.now();
+		Integer currentYear = now.getYear();
+		for(int i = startYear; i < currentYear; i++){
+			halfYears.add(i+"年上半年");
+			halfYears.add(i+"年下半年");
+		}
+		//current year
+		Integer currentDateInt = Integer.parseInt(now.toString(Constant.DATE_FORMAT_PATTERN3));
+		if(currentDateInt > Integer.parseInt(currentYear+"0101") && currentDateInt <= Integer.parseInt(currentYear+"0701")){
+			//yesterday,first-half-year
+			halfYears.add(currentYear+"年上半年");
+		}else if(currentDateInt > Integer.parseInt(currentYear+"0701") && currentDateInt <= Integer.parseInt(currentYear+"1231")){
+			//first-half-year
+			halfYears.add(currentYear+"年上半年");
+			//yesterday,second-half-year
+			halfYears.add(currentYear+"年下半年");
+		}
+		return halfYears;
+	}
+	
+	/**
+	 * buildMonthDates: a list with each month's lastDate for the last few months,
+	 * if current month,return yesterday,exclude the first day of the month(such as 01-01) when offset not 0
+	 * @param lastMonthsNumber
+	 * total month
+	 * @param offset
+	 * the offset days based on now which will determine the current month date, 
+	 * -1 by default means yesterday,
+	 * 0 will return now even though now is 1th(yyyy-MM--01)
+	 * @return a list with last date of last few months, including current month(yesterday) when offset not 0
+	*/
+	public static List<String> buildMonthDates(int lastMonthsNumber,Integer offset) {
+		if(offset == null){
+			offset = -1;
+		}
+		DateTime now = DateTime.now();
+		List<String> calDates = new ArrayList<String>();
+		// current month
+		if(!now.toString("MM-dd").equals("01-01") || offset == 0){
+			calDates.add(now.plusDays(offset).toString(Constant.DATE_FORMAT_PATTERN1));
+		}
+		//last few months
+		for(int i = 1; i <= lastMonthsNumber-1; i++){
+			now = now.minusMonths(1);
+			now = now.withDayOfMonth(now.dayOfMonth().getMaximumValue());
+			calDates.add(now.toString(Constant.DATE_FORMAT_PATTERN1));
 
+		}
+		Collections.reverse(calDates);
+		return calDates;
+	}
+	
+	public static void emptyToNull(Object obj){
+		try {
+		Field[] fields = obj.getClass().getDeclaredFields();
+	        for (Field field : fields) {
+	            // 设置为true，可以获取声明的私有字段的值
+	            field.setAccessible(true);
+	            if (isBlank(field.get(obj))) {
+					field.set(obj, null);
+	            }
+	        }
+		} catch (Exception e) {
+			LOGGER.error("set empty property to null failed:",e);
+			throw new InternalServerException("emptyToNull failed",e);
+		}
+	}
+	/**
+	 * 
+	 * formatMoneyToDouble #0.00
+	 * 
+	 * @param money
+	 * @return
+	 * double
+	 */
+	public static double formatMoneyToDouble(Object money){
+		return Double.parseDouble(formatMoneyToDoubleString(money));
+	}
+	/**
+	 * 
+	 * formatMoneyToDoubleString #0.00
+	 * 
+	 * @param money
+	 * @return
+	 * double
+	 */
+	public static String formatMoneyToDoubleString(Object money){
+		DecimalFormat df = new DecimalFormat("#0.00"); 
+		return df.format(Double.parseDouble(money.toString()));
+	}
+	/**
+	 * 
+	 * formateMoneyToStr  #,###.##
+	 * @return
+	 * String
+	 */
+	public static String formateMoneyToStr(Object money){
+		NumberFormat nf = new DecimalFormat("#,###.##");
+		return nf.format(money);
+	}
+	
+	/**
+	 * 
+	 * getYearMoneyDays<br/>
+	 * 1 year = 12 months = 12*30 days
+	 * @param totalDays
+	 * @return
+	 * Long[]
+	 */
+	public static Long[] getYearMonthDays(long totalDays){
+		  long year = totalDays / 360;
+	      long month = totalDays % 360/30;
+	      long days =  totalDays % 360 % 30;
+	      return new Long[]{year,month,days};
+	}
+	
+	
 	
 	/**
 	 * 将下划线大写方式命名的字符串转换为驼峰式。如果转换前的下划线大写方式命名的字符串为空，则返回空字符串。</br>

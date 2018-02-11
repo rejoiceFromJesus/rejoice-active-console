@@ -53,7 +53,7 @@ public class UserService extends BaseService<User> {
 	 * @see com.rejoice.active.console.service.BaseService#updateByIdSelective(java.lang.Object)
 	 */  
 	@Override    
-	public void updateByIdSelective(User t) throws Exception {
+	public void updateByIdSelective(User t){
 		if(!t.getOldPassword().equals(t.getPassword())){ 
 			t.setPassword(DigestUtils.md5Hex(t.getPassword()));
 		}  
